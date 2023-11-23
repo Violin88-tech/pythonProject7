@@ -8,8 +8,7 @@
 # >>> open_browser(browser_name="Chrome")
 # "Open Browser [Chrome]"
 
-from selene import browser, have, be, by
-import os
+
 
 def read_func(func, *args):
     func_name = func.__name__.replace('_', ' ').title()
