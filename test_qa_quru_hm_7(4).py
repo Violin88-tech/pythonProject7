@@ -9,7 +9,6 @@
 # "Open Browser [Chrome]"
 
 
-
 def read_func(func, *args):
     func_name = func.__name__.replace('_', ' ').title()
     args_name = ", ".join([*args])
@@ -29,11 +28,11 @@ def open_browser(browser_name):
 
 
 def go_to_companyname_homepage(page_url):
-    actual_result = read_func(go_to_companyname_homepage,page_url)
+    actual_result = read_func(go_to_companyname_homepage, page_url)
     assert actual_result == "Go To Companyname Homepage [https://companyname.com]"
 
 
 def find_registration_button_on_login_page(page_url, button_text):
-    actual_result = read_func(find_registration_button_on_login_page,page_url,
-        button_text)
+    actual_result = read_func(find_registration_button_on_login_page, page_url,
+                              button_text)
     assert actual_result == "Find Registration Button On Login Page [https://companyname.com/login, Register]"
