@@ -14,19 +14,19 @@ def test_find_suitable_user():
     ]
 
     # TODO найдите пользователя с именем "Olga"
-    for user in users:
-        if user['name'] is 'Olga':
-            return user
 
-    suitable_users = None
+    suitable_users = []
+    for user in users:
+        if user["name"] == "Olga":
+            suitable_users = user
     assert suitable_users == {"name": "Olga", "age": 45}
 
     # TODO найдите всех пользователей младше 20 лет
 
-    for age in users:
-        if user[age] < 20:
-            return user
-    suitable_users = None
+    suitable_users = []
+    for user in users:
+        if user["age"] < 20:
+            suitable_users.append(user)
     assert suitable_users == [
         {"name": "Stanislav", "age": 15},
         {"name": "Maria", "age": 18},
